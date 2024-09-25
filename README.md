@@ -8,7 +8,7 @@ This is a project from Itrasition intership program. If you wanna try it in loca
 - Make sure to change the models in the schema.prisma file if you are not using mysql
 - Run prisma migrate dev --name init to begin migrations
 - Run npm run dev
-- Test the proyect
+- Test the project
 
 ## Task instructions
 Use language and platform FOR YOU GROUP: 
