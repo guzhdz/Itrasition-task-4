@@ -34,3 +34,13 @@ User can use any non-empty password (even one character). If you use 3rd-party s
 Blocked user should not be able to login, deleted user can re-register.
 
 YOU HAVE TO CREATE A UNIQUE INDEX IN THE SELECTED DATABASE. NOT TO CHECK WITH YOU CODE FOR UNIQUENESS, BUT CREATE THE INDEX.
+
+## Preview Images:
+![image](https://github.com/user-attachments/assets/6483e758-4aab-4ab4-af03-a95f49092d8c)
+
+![image](https://github.com/user-attachments/assets/89b21f37-5c17-4280-a7c4-ec38512578ce)
+
+![image](https://github.com/user-attachments/assets/11629aaa-5807-4570-b077-fb786ee00b8c)
+
+
+
