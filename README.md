@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Login Page and User Manager
+Deploy Link: https://itrasition-task-4.onrender.com/
 
-## Getting Started
+This is a project from Itrasition intership program. If you wanna try it in local take this steps:
+- Download the project
+- Execute npm install
+- In the .env.example file insert your database url to connect the database with prisma as explained here: https://www.prisma.io/docs/accelerate/connection-pooling
+- Make sure to change the models in the schema.prisma file if you are not using mysql
+- Run prisma migrate dev --name init to begin migrations
+- Run npm run dev
+- Test the proyect
 
-First, run the development server:
+## Task instructions
+Use language and platform FOR YOU GROUP: 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+JavaScript or TypeScript, use React (you may use anything to store user data, e.g. implement back on Node.js+Express+MySQL; you may use some SaaS like Firebase - be careful, if you decide to use "out-of-the-box" users, it may be problematic to delete them).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a working and deployed Web application with registration and authentication.
+Non-authenticated users should not have access to the user management (admin panel).
+Only authenticated users should have access the user management table: id, name, e-mail, last login time, registration time, status (active/blocked).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The leftmost column of the table should contains checkboxes without labels for multiple selection (table header contains only checkbox without label that selects or deselects all records).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+There must be a toolbar over the table with the following actions: Block (red button with text), Unblock (icon), Delete (icon).
 
-## Learn More
+You have to use any CSS framework (Bootstrap is recommended, but you can choose any CSS framework).
 
-To learn more about Next.js, take a look at the following resources:
+All users should be able to block or delete themselves or any other user.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If user account is blocked or deleted any next user’s request should redirect to the login page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+User can use any non-empty password (even one character). If you use 3rd-party service to store users, you may 1) either implement your own "users" there or 2) accept that some requirement cannot be implemented (but you get results faster).
 
-## Deploy on Vercel
+Blocked user should not be able to login, deleted user can re-register.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+YOU HAVE TO CREATE A UNIQUE INDEX IN THE SELECTED DATABASE. NOT TO CHECK WITH YOU CODE FOR UNIQUENESS, BUT CREATE THE INDEX.
