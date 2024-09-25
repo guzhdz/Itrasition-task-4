@@ -10,7 +10,7 @@ import ConfirmModal from '../shared/ConfirmModal';
 import ToastComponent from '../shared/ToastComponent';
 
 //Library import
-import { Collapse } from 'bootstrap';
+//import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 //Services import
 import { updateUsers, deleteUsers } from '../../services/userService';
@@ -49,14 +49,18 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
     }
 
     const collapseToggle = () => {
-        const collapseElement = collapseRef.current;
-        const bsCollapse = new Collapse(collapseElement, { toggle: false });
-
-        if (selectedUsers.length > 0) {
-            bsCollapse.show();
-        } else {
-            bsCollapse.hide();
+        if(collapseRef.current) {
+            const { Collapse } = require("bootstrap");
+            const collapseElement = collapseRef.current;
+            const bsCollapse = new Collapse(collapseElement, { toggle: false });
+    
+            if (selectedUsers.length > 0) {
+                bsCollapse.show();
+            } else {
+                bsCollapse.hide();
+            }
         }
+
     }
 
     const handleActionButton = async (type) => {

@@ -1,14 +1,16 @@
 //React import
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 //Library import
-import Toast from 'bootstrap/js/dist/toast'
+//import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const ToastComponent = ({ activeToast, setActiveToast, toastMessage }) => {
     const toastRef = useRef(null);
 
+
     const showToast = () => {
         if (toastRef.current) {
+            const { Toast } = require("bootstrap");
             const toastBootstrap = new Toast(toastRef.current);
             toastBootstrap.show()
         }
@@ -19,7 +21,6 @@ const ToastComponent = ({ activeToast, setActiveToast, toastMessage }) => {
             showToast();
             setActiveToast(false);
         }
-            
     }, [activeToast]);
 
     return (
