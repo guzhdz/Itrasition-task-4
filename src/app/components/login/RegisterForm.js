@@ -37,9 +37,7 @@ const RegisterForm = ({
                     <div>{messageError}</div>
                 </div>}
 
-                <div className="d-flex flex-row justify-content-between mb-2">
-                <div className={`${styles['width-45']}`}>
-                    <input className={`form-control border border-0 ${styles['form-control-custom']} ${errors.name && 'is-invalid'}` }
+                    <input className={`form-control border border-0 mb-2 ${styles['form-control-custom']} ${errors.name && 'is-invalid'}` }
                         type="text"
                         id="name"
                         name="name"
@@ -56,10 +54,8 @@ const RegisterForm = ({
                         placeholder="Name"
                         disabled={loading} />
                     {errors.name && <InvalidFeedback message={errors.name.message} />}
-                </div>
 
-                    <div className={`${styles['width-45']}`}>
-                        <input className={`form-control border border-0 ${styles['form-control-custom']} ${errors.email && 'is-invalid'}`}
+                        <input className={`form-control border border-0 mb-2 ${styles['form-control-custom']} ${errors.email && 'is-invalid'}`}
                             type="email"
                             id="email"
                             name="email"
@@ -76,8 +72,6 @@ const RegisterForm = ({
                             placeholder="Email"
                             disabled={loading} />
                         {errors.email && <InvalidFeedback message={errors.email.message} />}
-                    </div>
-                </div>
 
                 <div className="input-group mb-4">
                         <input className={`form-control border border-0 ${styles['form-control-custom']} ${errors.password && 'is-invalid'}`}

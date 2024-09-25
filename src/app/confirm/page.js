@@ -28,7 +28,7 @@ export default function Confirm() {
             {isLoading && <LoadingPage />}
 
             {!isLoading && <div className={`card d-flex flex-column align-items-center justify-content-center border border-0 ${styles['card-custom']}`}>
-                <section className={`rounded d-flex ${styles['section-custom']}`}>
+                <section className={`rounded d-none d-md-flex ${styles['section-custom']}`}>
                     <i className={`bi bi-patch-check-fill mx-auto ${styles['icon-custom']}`}></i>
                 </section>
 

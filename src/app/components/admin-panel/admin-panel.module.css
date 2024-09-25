@@ -20,6 +20,10 @@
 }
 
 /*Table styles*/
+.card-custom {
+    min-width: 600px;
+}
+
 .card-custom, .card-custom th, .card-custom td {
     background-color: var(--foreground);
 }

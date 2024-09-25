@@ -200,7 +200,7 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
                                 </th>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
-                                <td>{user.last_login_time ? new Date(user.last_login_time).toLocaleString() : '-'}</td>
+                                <td>{user.last_login_time ? new Date(user.last_login_time).toLocaleString() : 'Has not logged in'}</td>
                                 <td>{user.register_time ? new Date(user.register_time).toLocaleString() : '-'}</td>
                                 <td>
                                     <span className={`badge ${user.status ? ' text-bg-success' : 'text-bg-danger'}`}>

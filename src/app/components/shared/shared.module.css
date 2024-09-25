@@ -29,6 +29,7 @@
 
 /*Header styles*/
 .nav-custom {
+    min-width: 360px;
     background-color: var(--primary);
 }
 

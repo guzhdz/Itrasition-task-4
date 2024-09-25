@@ -26,3 +26,9 @@
 .btn-container-custom {
     width: 40%;
 }
+
+@media (max-width: 780px) {
+    .btn-container-custom {
+        width: 100%;
+    }
+}
