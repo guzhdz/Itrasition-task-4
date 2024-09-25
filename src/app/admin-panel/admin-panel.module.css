@@ -1,0 +1,9 @@
+.main-custom {
+    height: 100%;
+}
+
+.main-section {
+    width: 80%;
+    max-width: 1400px;
+    min-width: 400px;
+}

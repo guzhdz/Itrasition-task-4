@@ -1,0 +1,45 @@
+/*Tabs styles*/
+.tabs-custom li {
+    width: 60px
+}
+
+.tabs-custom a {
+    color: var(--foreground) !important;
+}
+
+.tabs-custom a:hover {
+    color: var(--secondary) !important;
+}
+
+.tabs-custom a:focus {
+    color: var(--secondary) !important;
+}
+
+.tabs-custom .active-custom{
+    color: var(--tertiary) !important;
+}
+
+/*Table styles*/
+.card-custom, .card-custom th, .card-custom td {
+    background-color: var(--foreground);
+}
+
+.card-custom table, .card-custom td {
+    color: var(--background);
+}
+
+.card-custom th {
+    color: var(--primary-light); 
+}
+
+.no-records-custom {
+    width: 100%;
+}
+
+.no-records-custom p {
+    color: var(--primary-light);
+}
+
+.no-records-custom i {
+    color: var(--primary-light);
+}

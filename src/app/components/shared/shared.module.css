@@ -1,0 +1,52 @@
+/*Button styles*/
+.button-custom:hover {
+    filter: brightness(95%);
+}
+
+.button-custom:disabled {
+    filter: brightness(140%);
+}
+
+.btn-secondary-custom {
+    color: var(--background);
+    background-color: var(--secondary);
+}
+
+.btn-secondary-custom:hover, .btn-secondary-custom:active, .btn-secondary-custom:disabled  {
+    color: var(--background) !important;
+    background-color: var(--secondary) !important;
+}
+
+.btn-primary-light-custom {
+    color: var(--foreground);
+    background-color: var(--primary-light);
+}
+
+.btn-primary-light-custom:hover, .btn-primary-light-custom:active, .btn-primary-light-custom:disabled {
+    color: var(--foreground) !important;
+    background-color: var(--primary-light) !important;
+}
+
+/*Header styles*/
+.nav-custom {
+    background-color: var(--primary);
+}
+
+.account-custom:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+.account-custom .account-email {
+    font-size: .75rem;
+}
+
+.logo-custom {
+    color: var(--secondary);
+}
+
+/*LoadingPage styles*/
+.spinner-custom {
+    width: 60px;
+    height: 60px;
+}

@@ -1,0 +1,28 @@
+.main-custom {
+    height: 100%;
+}
+
+.card-custom {
+    width: 50%;
+    max-width: 800px;
+    min-width: 300px;
+    height: 30%;
+    min-height: 300px;
+
+    color: var(--foreground);
+
+    background-color: var(--primary);
+}
+
+.section-custom {
+    width: 70%;
+}
+
+.icon-custom {
+    font-size: 4rem;
+    color: var(--tertiary);
+}
+
+.btn-container-custom {
+    width: 40%;
+}

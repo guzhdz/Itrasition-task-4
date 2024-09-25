@@ -1,0 +1,39 @@
+.form-custom {
+    width: 70%;
+}
+
+.form-control-custom:focus {
+    box-shadow: 0 0 5px var(--tertiary);
+}
+
+.width-45 {
+    width: 48%;
+}
+
+.button-custom:hover {
+    filter: brightness(95%);
+}
+
+.button-custom:disabled {
+    filter: brightness(140%);
+}
+
+.visible-button {
+    color: var(--background);
+    background-color: var(--foreground);
+}
+
+.visible-button:hover, .visible-button:active, .visible-button:disabled {
+    color: var(--background) !important;
+    background-color: var(--foreground) !important;
+}
+
+.secondary-text {
+    font-size: .875rem;
+}
+
+.secondary-text span {
+    color: var(--tertiary);
+    cursor: pointer;
+    text-decoration: underline;
+}
