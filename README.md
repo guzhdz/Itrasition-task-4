@@ -1,6 +1,8 @@
 # Login Page and User Manager
 Deploy Link: https://itrasition-task-4.onrender.com/
 
+Web application that allows to register and authenticate as a user, also it allows the users manage of the app. 
+
 This is a project from Itrasition intership program. If you wanna try it in local take this steps:
 - Download the project
 - Execute npm install
@@ -9,6 +11,8 @@ This is a project from Itrasition intership program. If you wanna try it in loca
 - Run prisma migrate dev --name init to begin migrations
 - Run npm run dev
 - Test the project
+
+Technologies: Next.js, React.js (Javascript, CSS, HTML), GitHub, Node.js, PostgreSQL, Prisma ORM, Bootstrap.
 
 ## Task instructions
 Use language and platform FOR YOU GROUP: 
