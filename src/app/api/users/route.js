@@ -122,7 +122,8 @@ const getUsers = async () => {
     let statusCode = 500;
     try {
         const rows = await prisma.user.findMany({
-            select: { id_user: true, name: true, email: true, last_login_time: true, register_time: true, status: true }
+            select: { id_user: true, name: true, email: true, last_login_time: true, register_time: true, status: true },
+            orderBy: { id_user: 'asc' }
         });
         statusCode = 200;
         return new Response(JSON.stringify(rows), { status: statusCode });
@@ -159,7 +160,8 @@ const getBlockedUsers = async () => {
     try {
         const rows = await prisma.user.findMany({
             where: { status: 0 },
-            select: { id_user: true, name: true, email: true, last_login_time: true, register_time: true, status: true }
+            select: { id_user: true, name: true, email: true, last_login_time: true, register_time: true, status: true },
+            orderBy: { id_user: 'asc' }
         });
         statusCode = 200;
         return new Response(JSON.stringify(rows), { status: statusCode });
@@ -175,7 +177,8 @@ const getActiveUsers = async () => {
     try {
         const rows = await prisma.user.findMany({
             where: { status: 1 },
-            select: { id_user: true, name: true, email: true, last_login_time: true, register_time: true, status: true }
+            select: { id_user: true, name: true, email: true, last_login_time: true, register_time: true, status: true },
+            orderBy: { id_user: 'asc' }
         });
         statusCode = 200;
         return new Response(JSON.stringify(rows), { status: statusCode });

@@ -14,7 +14,6 @@ export async function GET(request) {
         const statusCode = 400;
         return new Response(JSON.stringify({ error: messageError }), { status: statusCode });
     }
-
 }
 
 const authUser = async (queryParams) => {
@@ -29,7 +28,6 @@ const authUser = async (queryParams) => {
     }
     try {
         const rows = await getUser(inputEmail);
-        console.log(rows);
         if (rows.length === 0) {
             messageError = 'Incorrect email or password';
             statusCode = 401;
@@ -50,7 +48,6 @@ const authUser = async (queryParams) => {
             }
         }
     } catch (error) {
-        console.log(error);
         messageError = "Server error. Please try again later.";
         statusCode = 500;
         return new Response(JSON.stringify({ error: messageError }), { status: statusCode });
