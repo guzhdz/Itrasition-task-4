@@ -37,7 +37,7 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
                 setIsSelectAll(true);
             }
         }
-    }
+    };
 
     const handleSelectAll = () => {
         if (isSelectAll) {
@@ -46,7 +46,7 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
             setSelectedUsers(users.map((user) => user.id_user));
         }
         setIsSelectAll(!isSelectAll);
-    }
+    };
 
     const collapseToggle = () => {
         if(collapseRef.current) {
@@ -61,7 +61,7 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
             }
         }
 
-    }
+    };
 
     const handleActionButton = async (type) => {
         if (userInfo.status) {
@@ -84,7 +84,7 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
             setIsLoading(true);
             router.push('/');
         }
-    }
+    };
 
     const setNewModalInfo = (action) => {
         setModalInfo({
@@ -101,7 +101,7 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
                 }
             }
         });
-    }
+    };
 
     const callDeleteUsers = async () => {
         setIsLoadingTable(true);
@@ -114,7 +114,7 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
         } else {
             showToast(response.message);
         }
-    }
+    };
 
     const blockUnblockUsers = async (type) => {
         setIsLoadingTable(true);
@@ -128,19 +128,19 @@ const Table = ({ users, fetchData, userInfo, deleteUserId, router, setIsLoading,
         } else {
             showToast(response.message);
         }
-    }
+    };
 
     const showToast = (message) => {
         setToastMessage(message);
         setActiveToast(true);
-    }
+    };
 
     useEffect(() => {
         collapseToggle();
     }, [selectedUsers]);
 
     return (
-        <div className={`card border border-0 p-2 ${styles['card-custom']}`}>
+        <div className={`overflow-auto card border border-0 p-2 ${styles['card-custom']}`}>
             <div className="collapse" id="actionButtons" ref={collapseRef}>
                 <div className="d-flex gap-2 justify-content-end">
                     <div data-bs-toggle={!userInfo.status ? '' : 'modal'} data-bs-target={!userInfo.status ? '' : '#confirmModal'}>
